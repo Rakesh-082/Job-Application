@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job APPlication</title>
+    <title>Job Application</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,20 +22,16 @@
                     </div>
                     <div class="form_control">
                         <label for="email">Email </label>
-                        <input type="email" name="email" placeholder="Enter Email Id...."/>
+                        <input type="email" id="email" name="email" placeholder="Enter Email Id...."/>
                     </div>
                     <div class="form_control">
                         <label for="job_role">Job Role</label>
                         <select name="Job_Role" id="job_role">
                             <option value="">Select Job Role</option>
-                            <option value="frontend">Frontend Developer</option>
-                            <option value="backend">
-                                Backend Developer
-                            </option>
-                            <option value="full_stack">Full Stack Developer</option>
-                            <option value="ui_ux">
-                                UI UX Designer
-                            </option>
+                            <option >Frontend Developer</option>
+                            <option >Backend Developer</option>
+                            <option >Full Stack Developer</option>
+                            <option >UI UX Designer</option>
                         </select>
                     </div>
                     <div class="textarea_control">
@@ -60,17 +56,18 @@
                         <input type="file" name="cv" id="cv">
                     </div>
                 </div>
-                <div class="button"><button type="submit">Apply Now</button></div>
+                <div class="button"><button id="btn" type="button" onclick="openPopup()">Apply Now</button></div>
             </form>
+            <div class="popup" id="popup">
+                <img src="404-tick.png">
+                <h2>Thank You!</h2>
+                <p id="msg"></p>
+                <button type="button" onclick="closePopup()">OK</button>
+            </div>
            
         </div>
     </div>
-    <footer>
-        <section class="footer_style">
-            <h3>Developed by-</h3>
-            <p>Rakesh Kellurkar</p>
-        </section>
-    </footer>
     
 </body>
+<script src="main.js"></script>
 </html>

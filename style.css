@@ -15,7 +15,7 @@ body{
 }
 
 .apply_box{
-    max-width: 600px;
+    max-width: 400px;
     padding: 20px;
     background-color: #F1E4C3 ;
     box-shadow: 4px 4px 4px rgba(1, 1, 1, 0.1);
@@ -33,7 +33,7 @@ body{
 .form_container{
     margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
     gap: 20px;
 }
 
@@ -51,7 +51,7 @@ input ,select,textarea{
     border: 1px solid #F1E4C3;
     border-radius: 10px;
     margin: 10px 10px; 
-    font-size: 15px;
+    font-size: 12px;
 }
 input:focus{
     outline-color: #C6A969 ;
@@ -87,7 +87,7 @@ button:hover{
 }
 
 .textarea_control textarea{
-    width: 100%;
+    width: 95%;
 }
 @media (max--width:460px) {
     .textarea_control{
@@ -108,15 +108,77 @@ footer{
     font-size: 15px;
     text-align: center;
     padding: 5px 20px;
-    margin: 0 auto;
+    margin-top: 30px;
     color: #606C5D;
-    
+    text-decoration: underline;
 }
 
 .footer_style p{
     font-size: 10px;
     text-align: center;
-    padding: 5px 2px;
+    padding: -14px 2px;
     margin: 0 auto;
     color: #606C5D;
 }
+
+.popup{
+    width: 380px;
+    background: #7A3E3E;
+    border-radius: 10px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #F1E4C3; 
+    visibility: hidden;
+    transition: transform 0.4s,top 0.4s;
+    filter: blur(100%);
+}
+
+
+.open-popup{
+    top: 50%;
+    visibility: visible;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.popup p{
+    color: #F1E4C3;
+}
+
+.popup img{
+    width: 100px;
+    margin-top: 50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) ;
+}
+
+.popup h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+    color: #F1E4C3;
+}
+
+.popup button{
+    width: 100%;
+    height: 50px;
+    margin-top: 50px;
+    padding: 10px 0;
+    background:#C6A969 ;
+    color: #2b312a;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) ;
+}
+
+.blur{
+    filter: blur(5px);
+    pointer-events: none;
+}
+
